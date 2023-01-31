@@ -7,6 +7,7 @@
     include './function.php';
 
 
+
     $lunghezza = $_GET['psw'];
     
     
@@ -35,7 +36,7 @@
         </div>
         <div class="col-12 mt-5">
             <form action="./index.php" method="GET">
-                <input type="number" name="psw" >
+                <input type="number" name="psw"  >
                 <button type="submit" class="btn btn-primary">Genera</button>
             </form>
         </div>

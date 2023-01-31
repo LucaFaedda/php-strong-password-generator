@@ -10,6 +10,8 @@ function generatePsw($lunghezza)
     $password = '';
     for($i = 0; $i<$lunghezza ; $i++){
         $password .= $valori[rand(0, strlen($valori) - 1)];
+
+        // passo i valori randomici da 0 ad un massimo della lunghezza di valori quindi se ho come valore massimo 80 nella stringa valori non posso randomizzare più di 80 volte
         
     }
 
