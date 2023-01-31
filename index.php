@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="col-12 mt-5">
-            <form action="./index.php" method="GET">
+            <form action="./my_psw.php" method="GET">
                 <label class="text-light">Lunghezza PSW: </label>
                 <input type="number" name="psw"  >
                 <button type="submit" class="btn btn-primary">Genera</button>
@@ -51,14 +51,14 @@
             <div class="col-12 text-center">
                 <h3 class="text-light">La tua password:</h3>                
                 <h3 class="text-danger"> <?php
-                if(isset($_GET['psw']) && $_GET['psw'] !== ''){
-                    $lunghezza = $_GET['psw'];
-                    echo generatePsw($lunghezza);
+                // if(isset($_GET['psw']) && $_GET['psw'] !== ''){
+                //     $lunghezza = $_GET['psw'];
+                //     echo generatePsw($lunghezza);
                     
-                }
-                else{
-                    echo 'Decidi lunghezza password';
-                }  ?> </h3>
+                // }
+                // else{
+                //     echo 'Decidi lunghezza password';
+                // }  ?> </h3>
             </div>
         </div>
     </div>

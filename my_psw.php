@@ -4,9 +4,13 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
+
 session_start();
 
+include './function.php';
+
 $_SESSION['psw'] = $_GET['psw'];
+$lunghezza = $_GET['psw'];
 
 ?>
 
@@ -19,6 +23,9 @@ $_SESSION['psw'] = $_GET['psw'];
     <title>Document</title>
 </head>
 <body>
-    <h1>La tua password: <?php echo generatePsw(); ?> </h1>
+    <h1>La tua password: <?php 
+                    echo generatePsw($lunghezza);
+              
+                ?> </h1>
 </body>
 </html>
