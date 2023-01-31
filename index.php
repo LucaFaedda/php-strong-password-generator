@@ -46,9 +46,19 @@
                         <label class="text-light">Lunghezza PSW: </label>
                         <input type="number" name="psw"  >
                     </div>
-                    <div class="col-6">
-                        <input class="form-check-input" type="checkbox" name="numeri" value="true">
-                        <label class="form-check-label text-light">Numeri</label>
+                    <div class="col-6 d-flex flex-column">
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="numeri" value="true">
+                            <label class="form-check-label text-light">Numeri</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="simboli" value="true">
+                            <label class="form-check-label text-light">Simboli</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="lettere" value="true">
+                            <label class="form-check-label text-light">Lettere</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-5">
