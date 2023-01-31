@@ -6,14 +6,14 @@
     
     include './function.php';
     
-    if(isset($_GET['psw']) && $_GET['psw'] !== ''){
-        $lunghezza = $_GET['psw'];
+    // if(isset($_GET['psw']) && $_GET['psw'] !== ''){
+    //     $lunghezza = $_GET['psw'];
         
 
-    }
-    else{
-        echo 'decidi lunghezza password';
-    }
+    // }
+    // else{
+    //     echo 'decidi lunghezza password';
+    // }
 
     
     
@@ -42,6 +42,7 @@
         </div>
         <div class="col-12 mt-5">
             <form action="./index.php" method="GET">
+                <label class="text-light">Lunghezza PSW: </label>
                 <input type="number" name="psw"  >
                 <button type="submit" class="btn btn-primary">Genera</button>
             </form>
