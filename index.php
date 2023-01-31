@@ -5,11 +5,7 @@
     error_reporting(E_ALL);
     
     include './function.php';
-    
-    
-    if(isset($_GET['psw']) && $_GET['psw'] !== ''){
-        generatePsw($_GET['psw']);
-    }
+
 
     $lunghezza = $_GET['psw'];
     
