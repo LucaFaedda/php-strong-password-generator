@@ -5,6 +5,7 @@
     error_reporting(E_ALL);
     
     include './function.php';
+
     
     // if(isset($_GET['psw']) && $_GET['psw'] !== ''){
     //     $lunghezza = $_GET['psw'];
@@ -15,9 +16,7 @@
     //     echo 'decidi lunghezza password';
     // }
 
-    
-    
-    
+
 
     
 ?>
@@ -42,14 +41,28 @@
         </div>
         <div class="col-12 mt-5">
             <form action="./my_psw.php" method="GET">
-                <label class="text-light">Lunghezza PSW: </label>
-                <input type="number" name="psw"  >
-                <button type="submit" class="btn btn-primary">Genera</button>
+                <div class="row">
+                    <div class="col-6">
+                        <label class="text-light">Lunghezza PSW: </label>
+                        <input type="number" name="psw"  >
+                    </div>
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" name="numeri" value="true">
+                        <label class="form-check-label text-light">Numeri</label>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12" >
+                        <button type="submit" class="btn btn-primary">Genera</button>
+
+                    </div>
+                </div>
+                
             </form>
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h3 class="text-light">La tua password:</h3>                
+                <!-- <h3 class="text-light">La tua password:</h3>                
                 <h3 class="text-danger"> <?php
                 // if(isset($_GET['psw']) && $_GET['psw'] !== ''){
                 //     $lunghezza = $_GET['psw'];
@@ -58,7 +71,7 @@
                 // }
                 // else{
                 //     echo 'Decidi lunghezza password';
-                // }  ?> </h3>
+                // }  ?> </h3> -->
             </div>
         </div>
     </div>
