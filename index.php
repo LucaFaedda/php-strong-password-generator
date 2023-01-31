@@ -4,28 +4,27 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     
-    $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ0123456789';
-    $lunghezza = $_GET['psw'];
-
-    var_dump($valori);
-    echo "<pre>";
-    var_dump($lunghezza);
-
-    function generatePsw($lunghezza, $valori)
+    
+    
+    // if(isset($_GET['psw']) && $_GET['psw'] !== ''){
+    //     generatePsw($_GET['psw']);
+    // }
+    
+    function generatePsw()
     {
-        $password = [];
+        $lunghezza = $_GET['psw'];
+        $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ0123456789!?%&';
+        $password = '';
         for($i = 0; $i<$lunghezza ; $i++){
-            $password = $i;
+            $password .= $valori[rand(0, strlen($valori) - 1)];
+            
         }
-
+  
         return $password;
     };
     
-  
-
 
     
-
 ?>
 
 <!DOCTYPE html>
@@ -48,9 +47,14 @@
         </div>
         <div class="col-12 mt-5">
             <form action="./index.php" method="GET">
-                    <input type="number" name="psw" >
-                    <button type="submit" class="btn btn-primary">Genera</button>
+                <input type="number" name="psw" >
+                <button type="submit" class="btn btn-primary">Genera</button>
             </form>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h3 class="text-danger"><?php echo generatePsw(); ?> </h3>
+            </div>
         </div>
     </div>
     
