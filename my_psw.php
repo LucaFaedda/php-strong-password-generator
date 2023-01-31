@@ -9,7 +9,7 @@ session_start();
 
 include './function.php';
 
-$_SESSION['psw'] = $_GET['psw'];
+$_SESSION['psw'] = $_GET['psw']; // qua passo il parametro di get a session
 $lunghezza = $_GET['psw'];
 
 ?>
