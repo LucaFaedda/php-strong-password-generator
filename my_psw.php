@@ -19,6 +19,6 @@ $_SESSION['psw'] = $_GET['psw'];
     <title>Document</title>
 </head>
 <body>
-    <h1>La tua password: <?php echo generatePsw($lunghezza); ?> </h1>
+    <h1>La tua password: <?php echo generatePsw(); ?> </h1>
 </body>
 </html>

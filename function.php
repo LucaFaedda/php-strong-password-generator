@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 function generatePsw($lunghezza)
 {
+
     $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ0123456789!?%&';
     $password = '';
     for($i = 0; $i<$lunghezza ; $i++){

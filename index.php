@@ -5,10 +5,16 @@
     error_reporting(E_ALL);
     
     include './function.php';
+    
+    if(isset($_GET['psw']) && $_GET['psw'] !== ''){
+        $lunghezza = $_GET['psw'];
+        
 
+    }
+    else{
+        echo 'decidi lunghezza password';
+    }
 
-
-    $lunghezza = $_GET['psw'];
     
     
     
@@ -42,8 +48,16 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                
-                <h3 class="text-danger">La tua password: <?php echo generatePsw($lunghezza); ?> </h3>
+                <h3 class="text-light">La tua password:</h3>                
+                <h3 class="text-danger"> <?php
+                if(isset($_GET['psw']) && $_GET['psw'] !== ''){
+                    $lunghezza = $_GET['psw'];
+                    echo generatePsw($lunghezza);
+                    
+                }
+                else{
+                    echo 'Decidi lunghezza password';
+                }  ?> </h3>
             </div>
         </div>
     </div>
