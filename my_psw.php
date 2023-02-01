@@ -11,9 +11,6 @@ include './function.php';
 
 $_SESSION['psw'] = $_GET['psw']; // qua passo il parametro di get a session
 $lunghezza = $_GET['psw'];
-
-
-
     
 
 ?>
@@ -29,9 +26,9 @@ $lunghezza = $_GET['psw'];
     <title>Mostra password</title>
 </head>
 <body>
-    <div class="copntainer">
+    <div class="container">
         <div class="row mt-5">
-            <div class="col-12 text-center mt-5 text-light">
+            <div class="col-12 text-center mt-5 alert alert-light">
                 <h1>La tua password: <?php echo generatePsw($lunghezza);?> </h1>
                 <h4>Numero caratteri scelti: <?php echo $lunghezza; ?></h4>
             </div>

@@ -40,35 +40,38 @@
             </div>
         </div>
         <div class="col-12 mt-5">
-            <form action="./my_psw.php" method="GET">
-                <div class="row">
-                    <div class="col-6">
-                        <label class="text-light">Lunghezza PSW: </label>
-                        <input type="number" name="psw"  >
+            <div class="container ">
+                <form action="./my_psw.php" method="GET">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="text-light">Lunghezza PSW: </label>
+                            <input type="number" name="psw"  >
+                        </div>
+                        <div class="col-6 d-flex flex-column">
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="numeri" value="true">
+                                <label class="form-check-label text-light">Numeri</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="simboli" value="true">
+                                <label class="form-check-label text-light">Simboli</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="lettere" value="true">
+                                <label class="form-check-label text-light">Lettere</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 d-flex flex-column">
-                        <div>
-                            <input class="form-check-input" type="checkbox" name="numeri" value="true">
-                            <label class="form-check-label text-light">Numeri</label>
-                        </div>
-                        <div>
-                            <input class="form-check-input" type="checkbox" name="simboli" value="true">
-                            <label class="form-check-label text-light">Simboli</label>
-                        </div>
-                        <div>
-                            <input class="form-check-input" type="checkbox" name="lettere" value="true">
-                            <label class="form-check-label text-light">Lettere</label>
+                    <div class="row mt-5">
+                        <div class="col-12" >
+                            <button type="submit" class="btn btn-primary">Genera</button>
+    
                         </div>
                     </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-12" >
-                        <button type="submit" class="btn btn-primary">Genera</button>
+                    
+                </form>
 
-                    </div>
-                </div>
-                
-            </form>
+            </div>
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">

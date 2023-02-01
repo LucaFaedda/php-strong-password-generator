@@ -15,12 +15,14 @@ function generatePsw($lunghezza)
     else{
         $numeri = null;
     }
+
     if(isset($_GET['simboli']) && $_GET['simboli'] !== true){
         $simboli = $_GET['simboli'];
     }
     else{
         $simboli = null;
     }
+
     if(isset($_GET['lettere']) && $_GET['lettere'] !== true){
         $lettere = $_GET['lettere'];
     }
@@ -30,9 +32,15 @@ function generatePsw($lunghezza)
 
     $password = '';
     if($numeri && $simboli && $lettere){ // tutto
-        $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ0123456789!?%&';
+        $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ0123456789!?%&()[]{}^"><+-*/';
         for($i = 0; $i<$lunghezza ; $i++){
-            $password .= $valori[rand(0, strlen($valori) - 1)];
+            $password .= $valori[rand(0, strlen($valori) - 1)]; 
+            // si poteva fare senza for in questo modo con il ciclo while.
+            // while(strln($password) < $lunghezza){
+            //     $randomChar = $valori[rand(0, strlen($valori) - 1)];
+            //     $password .= $valori;
+            // }
+            // oltreutto rand(0, strlen($valori) - 1) potevo metterlo come funzione
     
             // passo i valori randomici da 0 ad un massimo della lunghezza di valori quindi se ho come valore massimo 80 nella stringa valori non posso randomizzare più di 80 volte
             
@@ -40,7 +48,7 @@ function generatePsw($lunghezza)
     
     }
     else if($numeri && $simboli){ // numeri e simboli
-        $valori = '0123456789!?%&';
+        $valori = '0123456789!?%&()[]{}^"><+-*/';
         for($i = 0; $i<$lunghezza ; $i++){
             $password .= $valori[rand(0, strlen($valori) - 1)];            
         }
@@ -52,7 +60,7 @@ function generatePsw($lunghezza)
         }
     }
     else if($lettere && $simboli){ // lettere e simboli
-        $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ!?%&';
+        $valori = 'abcdefghijklmnopqurstuvwyzABCDEFGHIJKLMNOPQURSTUVWYZ!?%&()[]{}^"><+-*/';
         for($i = 0; $i<$lunghezza ; $i++){
             $password .= $valori[rand(0, strlen($valori) - 1)];            
         }
@@ -71,7 +79,7 @@ function generatePsw($lunghezza)
         }
     }
     else if($simboli){ // solo simboli
-        $valori = '!?%&';
+        $valori = '!?%&()[]{}^"><+-*/';
         for($i = 0; $i<$lunghezza ; $i++){
             $password .= $valori[rand(0, strlen($valori) - 1)];            
         }
@@ -83,5 +91,7 @@ function generatePsw($lunghezza)
 
     
 };
+
+
 
 ?>
