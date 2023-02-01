@@ -7,13 +7,13 @@
     
     include __DIR__. './function.php';
 
-if(!isset($_GET['psw'])){
+if(!isset($_GET['lenght-psw'])){
     header('Location: ./index.php');
 }
 else{
     session_start();
-    $_SESSION['psw'] = $_GET['psw']; // qua passo il parametro di get a session
-    $lunghezza = $_GET['psw'];
+    $_SESSION['lenght-psw'] = $_GET['lenght-psw']; // qua passo il parametro di get a session
+    $lunghezza = $_GET['lenght-psw'];
 
 }
 

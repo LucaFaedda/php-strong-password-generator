@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-6">
                             <label class="text-light">Lunghezza PSW: </label>
-                            <input type="number" name="psw"  >
+                            <input type="number" name="lenght-psw"  >
                         </div>
                         <div class="col-6 d-flex flex-column">
                             <div>
