@@ -29,7 +29,7 @@ $lunghezza = $_GET['psw'];
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center mt-5 alert alert-light">
-                <h1>La tua password: <?php echo generatePsw($lunghezza);?> </h1>
+                <h3>La tua password: <strong> <?php echo generatePsw($lunghezza);?></strong> </h3>
                 <h4>Numero caratteri scelti: <?php echo $lunghezza; ?></h4>
             </div>
         </div>
