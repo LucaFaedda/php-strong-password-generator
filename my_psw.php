@@ -4,16 +4,20 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    session_start();
+    
     include __DIR__. './function.php';
 
 if(!isset($_GET['psw'])){
     header('Location: ./index.php');
 }
+else{
+    session_start();
+    $_SESSION['psw'] = $_GET['psw']; // qua passo il parametro di get a session
+    $lunghezza = $_GET['psw'];
+
+}
 
 
-$_SESSION['psw'] = $_GET['psw']; // qua passo il parametro di get a session
-$lunghezza = $_GET['psw'];
     
 
 ?>
